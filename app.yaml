@@ -1,0 +1,11 @@
+runtime: php55
+handlers:
+- Url: /styles
+static_dir: styles
+
+- Url: /images/(.*\.(gif|png|jpg))
+static_files: image/\1
+upload: images/(.*\.(gif|png|jpg))
+
+- Url: /.*
+script: index.html
